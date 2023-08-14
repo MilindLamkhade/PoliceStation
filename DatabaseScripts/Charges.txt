@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Charges] (
+    [ChNumber]    INT           IDENTITY (1, 1) NOT NULL,
+    [CaseCode]    INT           NOT NULL,
+    [CaseHeading] VARCHAR (150) NOT NULL,
+    [ChargeSheet] VARCHAR (230) NOT NULL,
+    [Remarks]     VARCHAR (230) NOT NULL,
+    [PoliceCode]  INT           NOT NULL,
+    [PoliceName]  VARCHAR (50)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([ChNumber] ASC),
+    CONSTRAINT [FK2] FOREIGN KEY ([PoliceCode]) REFERENCES [dbo].[Police] ([EmpCode])
+);
+

@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Police] (
+    [EmpCode]        INT           IDENTITY (1, 1) NOT NULL,
+    [EmpName]        VARCHAR (50)  NOT NULL,
+    [EmpAddress]     VARCHAR (150) NOT NULL,
+    [EmpDesignation] VARCHAR (50)  NOT NULL,
+    [EmpPas]         VARCHAR (50)  NOT NULL,
+    [EmpPhone]       VARCHAR (10)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([EmpCode] ASC)
+);
+

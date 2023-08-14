@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Criminal] (
+    [CrCode]       INT           IDENTITY (1, 1) NOT NULL,
+    [CrName]       VARCHAR (50)  NOT NULL,
+    [CrAddress]    VARCHAR (150) NOT NULL,
+    [CrActivities] VARCHAR (150) NOT NULL,
+    PRIMARY KEY CLUSTERED ([CrCode] ASC)
+);
+

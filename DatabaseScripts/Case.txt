@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[Case] (
+    [CNum]        INT           IDENTITY (1, 1) NOT NULL,
+    [CType]       VARCHAR (150) NOT NULL,
+    [CHeading]    VARCHAR (150) NOT NULL,
+    [CDetails]    VARCHAR (150) NOT NULL,
+    [CPlace]      VARCHAR (100) NOT NULL,
+    [CDate]       DATE          NOT NULL,
+    [CPerson]     INT           NOT NULL,
+    [CPersonName] VARCHAR (100) NOT NULL,
+    [PoliceCode]  INT           NOT NULL,
+    [PoliceName]  VARCHAR (100) NOT NULL,
+    PRIMARY KEY CLUSTERED ([CNum] ASC),
+    CONSTRAINT [FK1] FOREIGN KEY ([CPerson]) REFERENCES [dbo].[Criminal] ([CrCode]),
+    CONSTRAINT [FK3] FOREIGN KEY ([PoliceCode]) REFERENCES [dbo].[Police] ([EmpCode])
+);
+
